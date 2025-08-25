@@ -94,21 +94,21 @@
             }
 
             /* .sidebar {
-                                                                                                                                                        width: 15rem;
-                                                                                                                                                        height: calc(100vh - 80px);
-                                                                                                                                                        position: sticky;
-                                                                                                                                                        top: 80px;
-                                                                                                                                                        left: 0;
-                                                                                                                                                        padding: 1.5rem;
-                                                                                                                                                        background-color: #f9fafb;
-                                                                                                                                                        overflow-y: auto;
-                                                                                                                                                    } */
+                    width: 15rem;
+                    height: calc(100vh - 80px);
+                    position: sticky;
+                    top: 80px;
+                    left: 0;
+                    padding: 1.5rem;
+                    background-color: #f9fafb;
+                    overflow-y: auto;
+                } */
 
-            .main-content {
-                margin-left: 15rem;
-                padding: 2rem;
-                width: calc(100% - 15rem);
-            }
+            /* .main-content {
+                    margin-left: 15rem;
+                    padding: 2rem;
+                    width: calc(100% - 15rem);
+                } */
         }
 
         /* Mobile specific styles */
@@ -179,13 +179,9 @@
             opacity: 0.8;
         }
 
-        /* .dual-images-container {
-                                                                                                                                            display: grid;
-                                                                                                                                            grid-template-columns: repeat(2, 1fr);
-                                                                                                                                        } */
-
-        .image-item {
-            max-width: 600px;
+        .dual-images-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
     </style>
 @endpush
@@ -215,13 +211,14 @@
         <!-- Desktop Layout -->
         <div class="desktop-layout hidden lg:flex relative">
             <!-- Sticky Sidebar with Thumbnails -->
-            <div class="sidebar scrollbar-hide rounded-3xl w-full max-w-56 p-6 shadow-md sticky top-40 left-0">
+            <div
+                class="sidebar scrollbar-hide rounded-3xl w-full max-w-56 p-6 shadow-md sticky top-40 left-0">
                 <div class="space-y-4">
                     <!-- Thumbnail for first image (single image) -->
                     <div id="thumb-0"
                         class="thumbnail-item relative w-full border-2 border-transparent px-6 rounded-lg transition-all duration-300">
                         <div class="relative overflow-hidden">
-                            <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Image+1" alt="Front Cover"
+                            <img src="{{asset('frontend/img/preview/1.jpg')}}" alt="Front Cover"
                                 class="w-full h-full aspect-video object-cover" data-target="image-0">
                             <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                         </div>
@@ -234,7 +231,7 @@
                         <div class="grid grid-cols-2">
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Image+2a" alt="Thumbnail 2a"
+                                    <img src="{{asset('frontend/img/preview/2.jpg')}}" alt="Thumbnail 2a"
                                         class="w-full aspect-video object-cover">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -242,7 +239,7 @@
                             </div>
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/e2e8f0/FFFFFF?text=Image+2b" alt="Thumbnail 2b"
+                                    <img src="{{asset('frontend/img/preview/3.jpg')}}" alt="Thumbnail 2b"
                                         class="w-full aspect-video object-cover">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -255,7 +252,7 @@
                         <div class="grid grid-cols-2">
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Image+3a" alt="Thumbnail 3a"
+                                    <img src="{{asset('frontend/img/preview/3.jpg')}}" alt="Thumbnail 3a"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -263,7 +260,7 @@
                             </div>
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/e2e8f0/FFFFFF?text=Image+3b" alt="Thumbnail 3b"
+                                    <img src="{{asset('frontend/img/preview/4.jpg')}}" alt="Thumbnail 3b"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -276,7 +273,7 @@
                         <div class="grid grid-cols-2">
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Image+4a" alt="Thumbnail 4a"
+                                    <img src="{{asset('frontend/img/preview/4.jpg')}}" alt="Thumbnail 4a"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -284,7 +281,7 @@
                             </div>
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/e2e8f0/FFFFFF?text=Image+4b" alt="Thumbnail 4b"
+                                    <img src="{{asset('frontend/img/preview/2.jpg')}}" alt="Thumbnail 4b"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -297,7 +294,7 @@
                         <div class="grid grid-cols-2">
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/94a3b8/FFFFFF?text=Image+5a" alt="Thumbnail 5a"
+                                    <img src="{{asset('frontend/img/preview/2.jpg')}}" alt="Thumbnail 5a"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -305,7 +302,7 @@
                             </div>
                             <div>
                                 <div class="relative">
-                                    <img src="https://placehold.co/600x400/e2e8f0/FFFFFF?text=Image+5b" alt="Thumbnail 5b"
+                                    <img src="{{asset('frontend/img/preview/4.jpg')}}" alt="Thumbnail 5b"
                                         class="w-full object-cover aspect-video">
                                     <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                                 </div>
@@ -319,7 +316,7 @@
                         class="thumbnail-item relative w-full border-2 border-transparent px-6 rounded-lg transition-all duration-300"
                         data-target="image-5">
                         <div class="relative">
-                            <img src="https://placehold.co/600x400/4c4c4c/FFFFFF?text=Image+6" alt="Back Cover"
+                            <img src="{{asset('frontend/img/preview/5.jpg')}}" alt="Back Cover"
                                 class="w-full h-full aspect-video object-cover" data-target="image-5">
                             <span class="absolute inset-0 backdrop-blur-xs bg-black/30"></span>
                         </div>
@@ -329,31 +326,31 @@
             </div>
 
             <!-- Main Content Area with Images -->
-            <div class="main-content scrollbar-hide">
+            <div class="flex-1 scrollbar-hide space-y-8 flex flex-col items-center p-6">
                 <!-- First Image (single) -->
-                <div id="image-0" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
-                    <img id="img-0" src="https://placehold.co/1200x800/3b82f6/FFFFFF?text=Image+1" alt="Image 1"
-                        class="w-full h-auto object-cover rounded-2xl image-blur">
+                <div id="image-0" class="w-full max-w-xl relative rounded-2xl overflow-hidden shadow-xl">
+                    <img id="img-0" src="{{asset('frontend/img/preview/1.jpg')}}" alt="Image 1"
+                        class="w-full aspect-video object-cover rounded-2xl image-blur">
                     <div id="overlay-0" class="image-overlay">
-                        <i id="lock-0" class="fas fa-lock lock-icon hidden"></i>
+                        <i id="lock-0" class="fas fa-lock lock-icon hidden!"></i>
                         <div class="loader" id="loader-0"></div>
                     </div>
                 </div>
 
                 <!-- Dual Images (1-4) -->
-                <div id="image-1" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <div id="image-1" class="w-full max-w-5xl relative rounded-2xl overflow-hidden shadow-xl">
                     <div class="dual-images-container">
                         <div class="relative">
-                            <img id="img-1a" src="https://placehold.co/600x800/94a3b8/FFFFFF?text=Image+2a"
-                                alt="Image 2a" class="w-full h-auto object-cover rounded-tl-2xl rounded-bl-2xl">
+                            <img id="img-1a" src="{{asset('frontend/img/preview/2.jpg')}}"
+                                alt="Image 2a" class="w-full aspect-video object-cover rounded-tl-2xl rounded-bl-2xl">
                             <div id="overlay-1a" class="image-overlay">
                                 <i id="lock-1a" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-1a"></div>
                             </div>
                         </div>
                         <div class="relative">
-                            <img id="img-1b" src="https://placehold.co/600x800/e2e8f0/FFFFFF?text=Image+2b"
-                                alt="Image 2b" class="w-full h-auto object-cover rounded-tr-2xl rounded-br-2xl">
+                            <img id="img-1b" src="{{asset('frontend/img/preview/3.jpg')}}"
+                                alt="Image 2b" class="w-full aspect-video object-cover rounded-tr-2xl rounded-br-2xl">
                             <div id="overlay-1b" class="image-overlay">
                                 <i id="lock-1b" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-1b"></div>
@@ -361,19 +358,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="image-2" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <div id="image-2" class="w-full max-w-5xl relative rounded-2xl overflow-hidden shadow-xl">
                     <div class="dual-images-container">
                         <div class="relative">
-                            <img id="img-2a" src="https://placehold.co/600x800/94a3b8/FFFFFF?text=Image+3a"
-                                alt="Image 3a" class="w-full h-auto object-cover rounded-tl-2xl rounded-bl-2xl">
+                            <img id="img-2a" src="{{asset('frontend/img/preview/3.jpg')}}"
+                                alt="Image 3a" class="w-full aspect-video object-cover rounded-tl-2xl rounded-bl-2xl">
                             <div id="overlay-2a" class="image-overlay">
                                 <i id="lock-2a" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-2a"></div>
                             </div>
                         </div>
                         <div class="relative">
-                            <img id="img-2b" src="https://placehold.co/600x800/e2e8f0/FFFFFF?text=Image+3b"
-                                alt="Image 3b" class="w-full h-auto object-cover rounded-tr-2xl rounded-br-2xl">
+                            <img id="img-2b" src="{{asset('frontend/img/preview/4.jpg')}}"
+                                alt="Image 3b" class="w-full aspect-video object-cover rounded-tr-2xl rounded-br-2xl">
                             <div id="overlay-2b" class="image-overlay">
                                 <i id="lock-2b" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-2b"></div>
@@ -381,19 +378,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="image-3" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <div id="image-3" class="w-full max-w-5xl relative rounded-2xl overflow-hidden shadow-xl">
                     <div class="dual-images-container">
                         <div class="relative">
-                            <img id="img-3a" src="https://placehold.co/600x800/94a3b8/FFFFFF?text=Image+4a"
-                                alt="Image 4a" class="w-full h-auto object-cover rounded-tl-2xl rounded-bl-2xl">
+                            <img id="img-3a" src="{{asset('frontend/img/preview/4.jpg')}}"
+                                alt="Image 4a" class="w-full aspect-video object-cover rounded-tl-2xl rounded-bl-2xl">
                             <div id="overlay-3a" class="image-overlay">
                                 <i id="lock-3a" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-3a"></div>
                             </div>
                         </div>
                         <div class="relative">
-                            <img id="img-3b" src="https://placehold.co/600x800/e2e8f0/FFFFFF?text=Image+4b"
-                                alt="Image 4b" class="w-full h-auto object-cover rounded-tr-2xl rounded-br-2xl">
+                            <img id="img-3b" src="{{asset('frontend/img/preview/2.jpg')}}"
+                                alt="Image 4b" class="w-full aspect-video object-cover rounded-tr-2xl rounded-br-2xl">
                             <div id="overlay-3b" class="image-overlay">
                                 <i id="lock-3b" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-3b"></div>
@@ -401,19 +398,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="image-4" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
+                <div id="image-4" class="w-full max-w-5xl relative rounded-2xl overflow-hidden shadow-xl">
                     <div class="dual-images-container">
                         <div class="relative">
-                            <img id="img-4a" src="https://placehold.co/600x800/94a3b8/FFFFFF?text=Image+5a"
-                                alt="Image 5a" class="w-full h-auto object-cover rounded-tl-2xl rounded-bl-2xl">
+                            <img id="img-4a" src="{{asset('frontend/img/preview/2.jpg')}}"
+                                alt="Image 5a" class="w-full aspect-video object-cover rounded-tl-2xl rounded-bl-2xl">
                             <div id="overlay-4a" class="image-overlay">
                                 <i id="lock-4a" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-4a"></div>
                             </div>
                         </div>
                         <div class="relative">
-                            <img id="img-4b" src="https://placehold.co/600x800/e2e8f0/FFFFFF?text=Image+5b"
-                                alt="Image 5b" class="w-full h-auto object-cover rounded-tr-2xl rounded-br-2xl">
+                            <img id="img-4b" src="{{asset('frontend/img/preview/4.jpg')}}"
+                                alt="Image 5b" class="w-full aspect-video object-cover rounded-tr-2xl rounded-br-2xl">
                             <div id="overlay-4b" class="image-overlay">
                                 <i id="lock-4b" class="fas fa-lock lock-icon"></i>
                                 <div class="loader hidden" id="loader-4b"></div>
@@ -423,9 +420,9 @@
                 </div>
 
                 <!-- Last Image (single) -->
-                <div id="image-5" class="image-item relative mb-8 rounded-2xl overflow-hidden shadow-xl">
-                    <img id="img-5" src="https://placehold.co/1200x800/4c4c4c/FFFFFF?text=Image+6" alt="Image 6"
-                        class="w-full h-auto object-cover rounded-2xl">
+                <div id="image-5" class="w-full max-w-xl relative rounded-2xl overflow-hidden shadow-xl">
+                    <img id="img-5" src="{{asset('frontend/img/preview/5.jpg')}}" alt="Image 6"
+                        class="w-full aspect-video object-cover rounded-2xl">
                     <div id="overlay-5" class="image-overlay">
                         <i id="lock-5" class="fas fa-lock lock-icon"></i>
                         <div class="loader hidden" id="loader-5"></div>
@@ -600,7 +597,7 @@
                     setTimeout(function() {
                         imgElement.removeClass('image-blur');
                         overlay.hide();
-                    }, 60000); // 1 minute
+                    }, 1000); // 1 minute
                 } else {
                     // All other images are locked and blurred
                     imgElement.addClass('image-blur');
@@ -628,7 +625,7 @@
             state.loaderActive = true;
 
             // Show the loader and hide the lock icon
-            lockIcon.addClass('hidden');
+            lockIcon.addClass('hidden!');
             loader.removeClass('hidden');
 
             // Simulate a loading delay between 3 and 5 seconds
